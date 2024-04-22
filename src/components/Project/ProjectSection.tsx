@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { Wave } from "../Skill/Skill";
 import { ProjectSectionProps } from "./Project";
 const ProjectSec = styled.div`
     margin-bottom:50px;
