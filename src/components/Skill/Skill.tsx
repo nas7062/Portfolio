@@ -8,7 +8,7 @@ import redux from "../../image/redux.png";
 import github from "../../image/github.png";
 import notion from "../../image/notion.png";
 import discord from "../../image/discord.jpg";
-
+import ts from "../../image/ts.png"
 const SkillSection = styled.section`
     width:100%;
     height:1000px;
@@ -101,6 +101,7 @@ const SKill =forwardRef<HTMLDivElement>((props,ref)=>
             <img src={Js} alt="" />            
             <img src={react} alt="" />
             <img src={redux} alt="" />
+            <img src={ts} alt="" />
             <h2>Cooperation</h2>     
             <img src={github} alt="" />            
             <img src={notion} alt="" />
