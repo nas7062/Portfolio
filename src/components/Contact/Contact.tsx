@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { Wave } from "../Skill/Skill";
 import Img from "../../image/profile.jpg"
@@ -71,7 +71,7 @@ const Descript = styled.div`
     margin-bottom:30px;
     line-height:50px;
 `
-export default function Contact()
+const Contact = forwardRef<HTMLDivElement>((props,ref) =>
 {   
     const NewTabHandler=(url:string ) =>{
         window.open(url, "_blank","noopener, noreferrer");
@@ -79,7 +79,7 @@ export default function Contact()
     
        
     return(
-        <ContactSection>
+        <ContactSection ref={ref}>
             <Title>
                 <span>C</span>
                 <span>O</span>
@@ -117,4 +117,6 @@ export default function Contact()
 
 
     );
-}
+});
+
+export default Contact;

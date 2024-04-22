@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-
+import { forwardRef } from "react";
 import { FaAnglesDown } from "react-icons/fa6";
 export const Down = keyframes`
 0% {
@@ -105,9 +105,9 @@ const HomeSection =styled.section`
     scroll-snap-stop: normal;
    
 `
-export default function Home() {
+const  Home = forwardRef<HTMLDivElement>((props,ref) =>{
     return (
-        <HomeSection>
+        <HomeSection ref ={ref}>
             <div>
                 <Circle>
                     <h2>10012</h2>
@@ -122,4 +122,6 @@ export default function Home() {
             </div>
         </HomeSection>
     )
-}
+});
+
+export default Home;

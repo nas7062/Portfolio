@@ -1,6 +1,6 @@
-import React  from "react";
-import styled from "styled-components";
 
+import styled from "styled-components";
+import React,{ forwardRef} from "react";
 const Logo = styled.nav`
     
     position:relative;
@@ -92,25 +92,33 @@ const Ul = styled.ul`
         transform: scaleX(1);
     }
 `
+interface NavbarProps {
+    scrollToHome: () => void;
+    scrollToAbout: () => void;
+    scrollToSkill: () => void;
+    scrollToProject: () => void;
+    scrollToContact: () =>void;
+}
+const Navbar:React.ForwardRefRenderFunction<HTMLDivElement,NavbarProps> = ({scrollToHome ,scrollToAbout,
+    scrollToSkill ,scrollToProject,scrollToContact}:NavbarProps,ref:any) => {
 
-export default function Navbar() {
-
-   
+    
     return (
-        <Nav>
+        <Nav ref ={ref}>
             
             <Content>
                 <Logo>
-                    <h2>10012</h2>
+                    <h2 onClick={scrollToHome}>10012</h2>
                 </Logo>
                 
-                <Ul>
-                    <li>About</li>
-                    <li>SKills</li>
-                    <li>Projects</li>
-                    <li>Contact</li>
+                <Ul >
+                    <li onClick={scrollToAbout}>About</li>
+                    <li onClick={scrollToSkill}>SKills</li>
+                    <li onClick={scrollToProject}>Projects</li>
+                    <li onClick={scrollToContact}>Contact</li>
                 </Ul>
             </Content>
         </Nav>
     );
 }
+export default forwardRef(Navbar);

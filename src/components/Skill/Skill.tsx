@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled, { keyframes } from "styled-components";
 import Html from "../../image/html.png";
 import CSS from "../../image/Css.png";
@@ -82,10 +82,10 @@ position:absolute;
 `
 
 
-export default function SKill()
+const SKill =forwardRef<HTMLDivElement>((props,ref)=>
 {
     return(
-        <SkillSection>
+        <SkillSection ref={ref}>
             <Title>
                 <span>S</span>
                 <span>K</span>
@@ -111,4 +111,6 @@ export default function SKill()
         </SkillSection>
 
     );
-}
+});
+
+export default SKill;

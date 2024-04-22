@@ -1,4 +1,4 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import styled from "styled-components";
 import { Wave } from "../Skill/Skill";
 import PJ1 from "../../image/1.png";
@@ -55,13 +55,13 @@ export interface ProjectSectionProps {
     
 }
 
-export default function Project() {
+const Project =forwardRef<HTMLDivElement>((props,ref) =>{
     const NewTabHandler=(url:string ) =>{
         window.open(url, "_blank","noopener, noreferrer");
     }
    
     return (
-        <ProjectSections>
+        <ProjectSections ref ={ref}>
             <Title>
                 <span>P</span>
                 <span>R</span>
@@ -88,4 +88,6 @@ export default function Project() {
             </Projects>
         </ProjectSections>
     );
-}
+});
+
+export default Project;

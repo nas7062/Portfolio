@@ -1,3 +1,4 @@
+import { forwardRef } from "react";
 import Img from "../../image/profile.jpg";
 import styled, { keyframes } from "styled-components";
 
@@ -93,10 +94,10 @@ animation: ${Sizeup} 5s infinite;
  }
 `
 
-export default function About()
+const About = forwardRef<HTMLDivElement>((props,ref)=>
 {
     return(
-        <AboutSection>
+        <AboutSection ref={ref}>
             <Title>ABOUT ME!</Title>
             <Image src={Img}alt="" />
             <Text>
@@ -110,4 +111,6 @@ export default function About()
         </AboutSection>
 
     );
-}
+});
+
+export default About;

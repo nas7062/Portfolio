@@ -9,7 +9,7 @@ import About from './components/About/About';
 import SKill from './components/Skill/Skill';
 import Project from './components/Project/Project';
 import Contact from './components/Contact/Contact';
-
+import { useRef } from 'react';
 const BgImg = styled.div`
     background-image : url(${bgimg});
     width:2000px;
@@ -20,21 +20,34 @@ const BgImg = styled.div`
 `
 const Scroll = styled.div`
   scroll-snap-type: y mandatory;
- 
-  
-  
 `
 function App() {
+    const homeRef = useRef<HTMLDivElement>(null);
+    const aboutRef = useRef<HTMLDivElement>(null);
+    const skillRef = useRef<HTMLDivElement>(null);
+    const projectRef = useRef<HTMLDivElement>(null);
+    const contactRef = useRef<HTMLDivElement>(null);
+
+    const scrollToRef = (ref: React.RefObject<HTMLDivElement>) => {
+      if (ref.current) {
+          ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+  };
   return (
     <BgImg >
-      <Navbar/>
+      <Navbar   scrollToHome={() => scrollToRef(homeRef)}
+                scrollToAbout={() => scrollToRef(aboutRef)}
+                scrollToSkill={() => scrollToRef(skillRef)}
+                scrollToProject={() => scrollToRef(projectRef)}
+                scrollToContact={() => scrollToRef(contactRef)}
+                />
       <Scroll>
-        <Home />
-        <About/>
-        <SKill/>
-        <Project/>
+        <Home ref={homeRef} />
+        <About ref= {aboutRef}/>
+        <SKill ref={skillRef}/>
+        <Project ref={projectRef}/>
       </Scroll>
-      <Contact/>
+      <Contact ref ={contactRef}/>
     </BgImg>
   );
 }
