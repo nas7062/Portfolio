@@ -47,6 +47,14 @@ const Git = styled.div`
     margin-bottom:30px;
     cursor:pointer;
 `
+const Vel = styled.div`
+    font-size:1.8rem;
+    position:relative;
+    top:-100px;
+    left:70%;
+    margin-bottom:30px;
+    cursor:pointer;
+`
 const IMG = styled.img`
     width:300px;
     height:300px;
@@ -97,6 +105,10 @@ export default function Contact()
                 <p>GitHub</p>
                 <p onClick={()=> NewTabHandler("https://github.com/nas7062")}>https://github.com/nas7062</p>
             </Git>
+            <Vel>
+                <p>Velog</p>
+                <p onClick={()=>NewTabHandler("https://velog.io/@10012/posts")}>https://velog.io/@10012/posts</p>
+            </Vel>
             <Text>
                 <p>TEl</p>
                 <p>010-9314-7062</p>
