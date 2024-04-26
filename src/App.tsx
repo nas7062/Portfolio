@@ -32,7 +32,7 @@ function App() {
       if (ref.current) {
           ref.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-  };
+  }; // 특정 div 섹션으로 스크롤 하는 함수
   return (
     <BgImg >
       <Navbar   scrollToHome={() => scrollToRef(homeRef)}
