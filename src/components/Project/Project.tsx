@@ -5,6 +5,7 @@ import PJ1 from "../../image/1.png";
 import PJ2 from "../../image/2.png";
 import PJ3 from '../../image/3.jpg'
 import PJ4 from '../../image/4.jpg'
+import PJ5 from '../../image/5.jpg'
 import ProjectSection from "./ProjectSection";
 const Title = styled.div`
 display:flex;
@@ -30,7 +31,7 @@ display:flex;
 `
 const ProjectSections = styled.section`
     width:100%;
-    height:2000px;
+    height:2500px;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     
@@ -85,6 +86,9 @@ const Project =forwardRef<HTMLDivElement>((props,ref) =>{
               <ProjectSection  img ={PJ4} title ="Forum" title2="마음의 소리"  
             descript= {["#React","#TypeScript","#Styled-Components","#Forum"]} NewTabHandler={NewTabHandler}
              git="https://github.com/nas7062/Forum" home = "https://anonymousforum.vercel.app" />
+             <ProjectSection  img ={PJ5} title ="Lecture" title2="강의 사이트"  
+            descript= {["#React","#Redux","#Styled-Components","#Lecture"]} NewTabHandler={NewTabHandler}
+             git="https://github.com/nas7062/Lecture" home = "https://lecture10012.vercel.app/" />
             </Projects>
         </ProjectSections>
     );

@@ -13,7 +13,7 @@ const ContactSection = styled.div`
 const Title = styled.div`
 display:flex;
     position:absolute;
-    top:450%;
+    top:620%;
     left:21%;
     & >span{
         font-size:3.5rem;
