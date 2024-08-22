@@ -5,6 +5,7 @@ import PJ1 from "../../image/1.png";
 import PJ2 from "../../image/2.png";
 import PJ3 from '../../image/3.jpg'
 import PJ4 from '../../image/4.jpg'
+import PJ5 from '../../image/5.png'
 import ProjectSection from "./ProjectSection";
 const Title = styled.div`
 display:flex;
@@ -30,7 +31,7 @@ display:flex;
 `
 const ProjectSections = styled.section`
     width:100%;
-    height:2000px;
+    height:2500px;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     
@@ -73,6 +74,9 @@ const Project =forwardRef<HTMLDivElement>((props,ref) =>{
                 <span>S</span>
             </Title>
             <Projects>
+            <ProjectSection  img ={PJ5} title ="Hobby Group" title2="취미그룹 사이트"  
+            descript= {["#React","#TypeScript","#Styled-Components","#Hobby" ]} NewTabHandler={NewTabHandler}
+             git="https://github.com/nas7062/typescript-redux" home = "https://10012-trd.vercel.app/" />
             <ProjectSection  img ={PJ2} title ="React-Shop" title2="쇼핑몰 프로젝트"  
             descript= {["#React","#Css","#솔로 프로젝트","#쇼핑몰"]} NewTabHandler={NewTabHandler}
              git="https://github.com/nas7062/react-shop" home = "https://10012.vercel.app" />
@@ -85,6 +89,7 @@ const Project =forwardRef<HTMLDivElement>((props,ref) =>{
               <ProjectSection  img ={PJ4} title ="Forum" title2="마음의 소리"  
             descript= {["#React","#TypeScript","#Styled-Components","#Forum"]} NewTabHandler={NewTabHandler}
              git="https://github.com/nas7062/Forum" home = "https://anonymousforum.vercel.app" />
+             
             </Projects>
         </ProjectSections>
     );
