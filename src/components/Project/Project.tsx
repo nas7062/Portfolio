@@ -89,7 +89,7 @@ const Project =forwardRef<HTMLDivElement>((props,ref) =>{
              git="https://github.com/nas7062/Lecture" home = "https://lecture10012.vercel.app/" />
               <ProjectSection  img ={PJ7} title ="Music Web" title2="뮤직 웹사이트"  
             descript= {["#React","#TypeScript","#Styled-Components","#Music" ]} NewTabHandler={NewTabHandler}
-             git="https://github.com/nas7062/typescript-redux" home = "https://10012-trd.vercel.app/" />
+             git="https://github.com/nas7062/MusicWeb" home = "https://music-web-10012.vercel.app/" />
               <ProjectSection  img ={PJ4} title ="Forum" title2="마음의 소리"  
             descript= {["#React","#TypeScript","#Styled-Components","#Forum"]} NewTabHandler={NewTabHandler}
              git="https://github.com/nas7062/Forum" home = "https://anonymousforum.vercel.app" />
