@@ -85,7 +85,7 @@ const Project =forwardRef<HTMLDivElement>((props,ref) =>{
              git="https://github.com/nas7062/redux-shopping" home = "https://10012-shopping-rd.vercel.app" />
             <ProjectSection  img ={PJ6} title ="Redux-Lecture" title2="강의 프로젝트"  
             descript= {["#React","#Redux","#Styled-Components","#Lecture"]} NewTabHandler={NewTabHandler}
-             git="https://github.com/nas7062/Todo-list" home = "https://10012-todo-list.vercel.app" />
+             git="https://github.com/nas7062/Lecture" home = "https://lecture10012.vercel.app/" />
               <ProjectSection  img ={PJ4} title ="Forum" title2="마음의 소리"  
             descript= {["#React","#TypeScript","#Styled-Components","#Forum"]} NewTabHandler={NewTabHandler}
              git="https://github.com/nas7062/Forum" home = "https://anonymousforum.vercel.app" />
