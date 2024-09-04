@@ -6,6 +6,7 @@ import PJ2 from "../../image/2.png";
 import PJ4 from '../../image/4.jpg'
 import PJ5 from '../../image/5.png'
 import PJ6 from '../../image/6.jpg'
+import PJ7 from '../../image/7.jpg'
 import ProjectSection from "./ProjectSection";
 const Title = styled.div`
 display:flex;
@@ -31,7 +32,7 @@ display:flex;
 `
 const ProjectSections = styled.section`
     width:100%;
-    height:2500px;
+    height:3000px;
     scroll-snap-align: start;
     scroll-snap-stop: normal;
     
@@ -86,6 +87,9 @@ const Project =forwardRef<HTMLDivElement>((props,ref) =>{
             <ProjectSection  img ={PJ6} title ="Redux-Lecture" title2="강의 프로젝트"  
             descript= {["#React","#Redux","#Styled-Components","#Lecture"]} NewTabHandler={NewTabHandler}
              git="https://github.com/nas7062/Lecture" home = "https://lecture10012.vercel.app/" />
+              <ProjectSection  img ={PJ7} title ="Music Web" title2="뮤직 웹사이트"  
+            descript= {["#React","#TypeScript","#Styled-Components","#Music" ]} NewTabHandler={NewTabHandler}
+             git="https://github.com/nas7062/typescript-redux" home = "https://10012-trd.vercel.app/" />
               <ProjectSection  img ={PJ4} title ="Forum" title2="마음의 소리"  
             descript= {["#React","#TypeScript","#Styled-Components","#Forum"]} NewTabHandler={NewTabHandler}
              git="https://github.com/nas7062/Forum" home = "https://anonymousforum.vercel.app" />
